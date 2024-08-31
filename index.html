@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <title>Convertor to time</title>
+    <title>Pagination</title>
   </head>
   <body>
     <!-- <div class="container">
@@ -20,17 +20,54 @@
       <div class="pagination"></div>
     </div> -->
     <div class="container">
-      <form  class="convertor">
-         <h3 class="convertor-title">Конвертор</h3>
-         <div class="convertor-row">
-            <input type="text" class="convertor-inp" placeholder="Введите десятичное число в формате '00.00'">
-            <div class="convertor-note">Целая часть введенного числа равна кол-ву часов, конвертируется только дробная часть числа(минуты)</div>
+      <form  class="convertor" id="calculator">
+         <div class="convertor-header">
+            <h3 class="convertor-title">Калькулятор</h3>
          </div>
-         <div class="convertor-row">
-            <div class="convertor-result"></div>
+         <div class="convertor-body">
+            <div class="convertor-row">
+               <input type="text" class="convertor-inp" id="num1" placeholder="Введите десятичное число в формате '00.00'" style="margin-bottom: 8px;" >
+               <input type="text" class="convertor-inp" id="num2" placeholder="Введите десятичное число в формате '00.00'">
+               <div class="convertor-radiogroup">
+                  <button class="btn-action" id="plus">+</button>
+                  <button class="btn-action" id="minus">-</button>
+                  <!-- <label for="plus">
+                     <input type="radio" name="action" id="plus">
+                     <span>+</span>
+                  </label>
+                  <label for="minus">
+                     <input type="radio" name="action" id="minus">
+                     <span>-</span>
+                  </label> -->
+               </div>
+            </div>
+            <div class="convertor-row">
+               <div class="convertor-result"></div>
+            </div>
          </div>
-         <div class="convertor-row">
-            <button class="btn-clean">Очистить</button>
+         <div class="convertor-footer">
+            <div class="convertor-row">
+               <button class="btn-clean">Очистить</button>
+            </div>
+         </div>
+      </form>
+      <form  class="convertor" id="convertor">
+         <div class="convertor-header">
+            <h3 class="convertor-title">Конвертор</h3>
+         </div>
+         <div class="convertor-body">
+            <div class="convertor-row">
+               <input type="text" class="convertor-inp" placeholder="Введите десятичное число в формате '00.00'">
+               <div class="convertor-note">Целая часть введенного числа равна кол-ву часов, конвертируется только дробная часть числа(минуты)</div>
+            </div>
+            <div class="convertor-row">
+               <div class="convertor-result"></div>
+            </div>
+         </div>
+         <div class="convertor-footer">
+            <div class="convertor-row">
+               <button class="btn-clean">Очистить</button>
+            </div>
          </div>
       </form>
     </div>

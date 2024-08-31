@@ -12,73 +12,13 @@
  .container {
    max-width: 1200px;
    margin: 0 auto;
- }
- 
- .title {
    display: flex;
    justify-content: center;
+   gap: 16px;
+   flex-wrap: wrap;
  }
  
- /*  */
  
- .pagination {
-   display: flex;
-   justify-content: center;
- }
- 
- .pagination__list {
-   display: flex;
-   list-style-type: none;  
- }
- 
- .pagination__item {
-   padding: 8px;
-   margin: 8px;
-   cursor: pointer;
-   border:1px solid teal;
-   color: #000;
- }
- 
- .pagination__item--active {
-   font-weight: 800;
-   color: gold;
-   background: teal;
- }
- .products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.products-item {
-  width: 33.3333%;
-  min-width: 300px;
-  padding: 10px;
-}
-.products-inner {
-  border:1px solid teal;
-}
-/* .card = .products-inner */
-.card-header {
-  height: 220px;
-  display: grid;
-  place-content: center;
-
-}
-.card-body {
-  padding: 10px 16px;
-}
-
-.card-footer {
-  padding: 10px 16px;
-}
-.card-btn {
-  padding: 4px 16px;
-  border-radius: 8px;
-  background-color: teal;
-  border:0;
-  color: gold;
-  cursor:pointer;
-}
 
 /*  */
 
@@ -87,6 +27,12 @@
   padding: 24px 10px;
   margin: 20px auto;
   border: 1px solid teal;
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+}
+.convertor-body{
+  flex:1 auto;
 }
 .convertor-title {
   text-align: center;
@@ -96,6 +42,7 @@
 .convertor-inp {
   width: 100%;
   border: 2px solid teal;
+  border-radius: 8px;
   outline: none;
   padding: 4px 8px;
   text-align: center;
@@ -124,4 +71,18 @@ input::placeholder{
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   cursor: pointer;
+}
+.convertor-radiogroup {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 0;
+}
+.btn-action {
+  width: 24px;
+  background-color: teal;
+  color: gold;
+  border: 0;
+  cursor: pointer;
+  border-radius: 8px;
 }
