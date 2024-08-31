@@ -114,12 +114,25 @@
 
 const input = document.querySelector('.convertor-inp')
 const result = document.querySelector('.convertor-result')
+const btnClean = document.querySelector('.btn-clean')
+
 
 input.addEventListener('input', () => {
    const value = input.value
    const resultValue = convertDecimalToTime(value)
    result.innerHTML = resultValue
 })
+
+btnClean.addEventListener('click', e => {
+   e.preventDefault()
+   clean()
+})
+
+function clean(){
+   input.value = ''
+   result.innerHTML = ''
+   input.focus()
+}
 
 function convertDecimalToTime(decimalTime) {
    // Получаем количество часов из целой части десятичного числа
