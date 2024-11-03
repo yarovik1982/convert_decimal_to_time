@@ -1,0 +1,15 @@
+@media(max-width:810px){
+   .burger{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+   .tab__list{
+      flex-direction: column;
+      width: 300px;
+      padding: 1rem;
+      position: absolute;
+      top: 30px;
+      /* background: teal; */
+   }
+}

@@ -1,9 +1,13 @@
+@import url(media.css);
+
 * {
    margin: 0px;
    padding: 0px;
    box-sizing: border-box;
  }
- 
+ ul,li{
+  list-style-type: none;
+ }
  body {
    background-color: #f1f5f8;
    font-family: "Open Sans", sans-serif;
@@ -12,18 +16,50 @@
  .container {
    max-width: 1200px;
    margin: 0 auto;
-   display: flex;
-   justify-content: center;
-   gap: 16px;
-   flex-wrap: wrap;
  }
  
- 
+.tab__container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+.burger {
+  width: 30px;
+  height: 27px;
+  display: none;
+  cursor: pointer;
+}
+.burger__line {
+  width: 100%;
+  height: 3px;
+  background: teal;
+}
+.tab__list {
+  display: flex;
+  padding: 0.5rem 0;
+  margin: 0 auto;
+  width: fit-content;
+  background-color: #f1f5f8;
+}
+.tab__item {
+  padding: 0.25rem .5rem;
+  cursor: pointer;
+}
+/* @media(max-width:769px){
+  .tab__item{
+    font-size: calc(1px * 1vw);
+  }
+} */
+.tab__item_active {
+  box-shadow: 0 0 0px 2px teal;
+}
 
 /*  */
 
-.convertor {
-  width: 350px;
+.form {
+  width: 40%;
+  min-width: 300px;
   padding: 24px 10px;
   margin: 20px auto;
   border: 1px solid teal;
@@ -31,15 +67,20 @@
   flex-direction: column;
   min-height: 100px;
 }
-.convertor-body{
+.form-body{
   flex:1 auto;
 }
-.convertor-title {
+.form-title {
   text-align: center;
   margin-bottom: 10px;
 }
-
-.convertor-inp {
+.form-row{
+  margin-bottom: 0.5rem;
+}
+.form-row label{
+  font-size: 12px;
+}
+.form-inp {
   width: 100%;
   border: 2px solid teal;
   border-radius: 8px;
@@ -47,19 +88,19 @@
   padding: 4px 8px;
   text-align: center;
 }
-.convertor-note {
+.form-note {
   font-size: 10px;
+  padding: 0 0.5rem;
 }
 input::placeholder{
   font-size: 12px;
   color:#000;
 }
-.convertor-result{
-  height: 30px;
-  line-height: 30px;
+.form-result{
+  min-height: 40px;
   text-align: center;
 }
-.btn-clean {
+.form-btn {
   width: 100%;
   padding: 8px 0;
   border-radius: 8px;
@@ -72,7 +113,7 @@ input::placeholder{
   -o-border-radius: 8px;
   cursor: pointer;
 }
-.convertor-radiogroup {
+.form-radiogroup {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -85,4 +126,30 @@ input::placeholder{
   border: 0;
   cursor: pointer;
   border-radius: 8px;
+}
+@media(max-width:810px){
+  .burger{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+  }
+  .tab__list{
+     flex-direction: column;
+     width: 300px;
+     padding: 1rem;
+     position: absolute;
+     top: 46px;
+     left: -300px;
+     transition: left .3s linear;
+     -webkit-transition: left .3s linear;
+     -moz-transition: left .3s linear;
+     -ms-transition: left .3s linear;
+     -o-transition: left .3s linear;
+}
+  .tab__list.tab__list_active{
+    left: 0;
+  }
+  .tab__item{
+    width: fit-content;
+  }
 }
